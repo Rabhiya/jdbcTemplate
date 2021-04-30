@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>jdbcTemplate</groupId>
+  <artifactId>jdbcTemplate</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+   <properties>
+		<spring.version>5.3.6</spring.version>
+		<java.version>8</java.version>
+		<jdbc.version>18.3.0.0</jdbc.version>
+	</properties>
+
+
+		<dependencies>
+		
+			<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+			<dependency>
+			    <groupId>org.springframework</groupId>
+			    <artifactId>spring-core</artifactId>
+			    <version>5.3.6</version>
+			</dependency>
+
+			<!-- Spring Context -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			
+			<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+			<dependency>
+			    <groupId>org.springframework</groupId>
+			    <artifactId>spring-jdbc</artifactId>
+			    <version>5.3.6</version>
+			</dependency>
+
+
+			<!-- JDBC18 -->
+			<dependency>
+				<groupId>com.oracle.database.jdbc</groupId>
+				<artifactId>ojdbc8</artifactId>
+				<version>${jdbc.version}</version>
+			</dependency>
+			
+
+
+		</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<target>${java.version}</target>
+					<source>${java.version}</source>
+					<release>${java.version}</release>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+  
+</project>
